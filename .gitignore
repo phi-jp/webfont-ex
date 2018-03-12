@@ -57,3 +57,9 @@ lib/vendor
 
 # Package
 dist
+
+
+# demo
+
+demo/node_modules
+demo/package-lock.json
