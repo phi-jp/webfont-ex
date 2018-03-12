@@ -1,0 +1,17 @@
+{
+  "name": "webfont-ex-test",
+  "version": "0.0.1",
+  "description": "Generator of fonts from svg icons, svg icons to svg font, svg font to ttf, ttf to eot, ttf to woff, ttf to woff2",
+  "license": "MIT",
+  "author": "phi",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/phi-jp/webfont-ex"
+  },
+  "keywords": [],
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "path": "^0.12.7",
+    "webfont-ex": "../"
+  }
+}

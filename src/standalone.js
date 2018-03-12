@@ -308,7 +308,7 @@ export default function(initialOptions) {
             );
 
             result.styles = nunjucks.render(templateFilePath, nunjucksOptions);
-
+            result.html = nunjucks.render(`${buildInTemplateDirectory}/template.html.njk`, nunjucksOptions);
             return result;
           });
         })
