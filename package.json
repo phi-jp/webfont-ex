@@ -1,19 +1,12 @@
 {
-  "name": "webfont",
-  "version": "8.0.0",
+  "name": "webfont-ex",
+  "version": "0.0.1",
   "description": "Generator of fonts from svg icons, svg icons to svg font, svg font to ttf, ttf to eot, ttf to woff, ttf to woff2",
   "license": "MIT",
-  "author": "itgalaxy <development@itgalaxy.company>",
-  "contributors": [
-    {
-      "name": "Alexander Krasnoyarov",
-      "email": "alexander.krasnoyarov@itgalaxy.company",
-      "url": "https://vk.com/sterling_archer"
-    }
-  ],
+  "author": "phi",
   "repository": {
     "type": "https",
-    "url": "https://github.com/itgalaxy/webfont"
+    "url": "https://github.com/phi-jp/webfont-ex"
   },
   "keywords": [
     "cli",
@@ -41,7 +34,7 @@
     "generator"
   ],
   "bugs": {
-    "url": "https://github.com/itgalaxy/webfont/issues"
+    "url": "https://github.com/phi-jp/webfont-ex/issues"
   },
   "main": "dist/index.js",
   "bin": "dist/cli.js",
