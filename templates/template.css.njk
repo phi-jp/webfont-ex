@@ -35,44 +35,37 @@
     font-weight: 400;
 }
 
+[data-icon]:before { content: attr(data-icon); }
+
 .{{ className }} {
     display: inline-block;
-    transform: translate(0, 0);
+    font-family: {{ fontName }};
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
     text-rendering: auto;
-    font: normal normal 400 14px/1 {{ fontName }};
     font-size: inherit;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
 }
 
-.{{ className }}-lg {
-    vertical-align: -15%;
-    line-height: 0.75em;
-    font-size: 1.33333333em;
+{% for glyph in glyphs %}.{{ className }}-{{ glyph.name }}::before,
+{% endfor %}.{{ className }}-dummy::before
+{
+    display: inline-block;
+    font-family: {{ fontName }};
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    font-size: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
 }
+{% for glyph in glyphs %}
+.{{ className }}-{{ glyph.name }}::before { content: "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}"; }{% endfor %}
 
-.{{ className }}-2x {
-    font-size: 2em;
-}
-
-.{{ className }}-3x {
-    font-size: 3em;
-}
-
-.{{ className }}-4x {
-    font-size: 4em;
-}
-
-.{{ className }}-5x {
-    font-size: 5em;
-}
-
-.{{ className }}-fw {
-    width: 1.28571429em;
-    text-align: center;
-}{% for glyph in glyphs
-%}
-
-.{{ className }}-{{ glyph.name }}::before {
-    content: "\{{ glyph.unicode[0].charCodeAt(0).toString(16) }}";
-}{% endfor %}
